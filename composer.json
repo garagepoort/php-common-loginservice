@@ -6,7 +6,6 @@
     }
   },
   "require": {
-    "illuminate/routing": "~4.0",
     "illuminate/support": "~4.0",
     "katzgrau/klogger": "1.0.*",
     "phpunit/phpunit": "4.0.*",
