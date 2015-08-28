@@ -3,6 +3,7 @@
 namespace com\bendani\phpcommon\loginservice\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
 
 class LoginServiceProvider extends ServiceProvider
 {
@@ -16,4 +17,16 @@ class LoginServiceProvider extends ServiceProvider
     {
 
     }
+
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        parent::boot();
+    }
+
+
 }

@@ -1,11 +1,12 @@
 {
-  "name": "php-common/login-service",
+  "name": "bendani/php-common/login-service",
   "autoload": {
     "psr-0": {
       "com\\bendani\\php-common\\login-service": "src"
     }
   },
   "require": {
+    "illuminate/routing": "4.2.x-dev",
     "illuminate/support": "~4.0",
     "katzgrau/klogger": "1.0.*",
     "phpunit/phpunit": "4.0.*",
