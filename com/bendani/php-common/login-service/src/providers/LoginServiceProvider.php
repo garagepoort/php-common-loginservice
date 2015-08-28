@@ -26,11 +26,11 @@ class LoginServiceProvider extends ServiceProvider
     public function boot()
     {
 //        $this->package('bendani/php-common/login-service', 'common-login');
-        $this->package('bendani/php-common/login-service');
+//        $this->package('bendani/php-common/login-service');
 
 //        $view = View::make('common-login::login-form');
 
-        View::addNamespace('bendani/php-common/login-service', __DIR__.'/../views');
+//        View::addNamespace('bendani/php-common/login-service', __DIR__.'/../views');
     }
 
 
