@@ -1,6 +1,6 @@
 <?php
 
-namespace com\bendani\phpcommon\loginservice\Providers;
+namespace Bendani\PhpCommon\LoginService\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -24,12 +24,12 @@ class LoginServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('bendani/php-common/login-service', 'common-login');
-//        $this->package('bendani/php-common/login-service');
+//        $this->package('bendani/php-common/login-service', 'common-login');
+        $this->package('bendani/php-common/login-service');
 
 //        $view = View::make('common-login::login-form');
 
-        View::addNamespace('common-login', __DIR__.'/../views');
+        View::addNamespace('bendani/php-common/login-service', __DIR__.'/../views');
     }
 
 
