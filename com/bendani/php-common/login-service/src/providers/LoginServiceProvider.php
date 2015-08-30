@@ -29,7 +29,7 @@ class LoginServiceProvider extends ServiceProvider
 
 //        $view = View::make('common-login::login-form');
 
-        View::addNamespace('bendani/php-common/login-service', __DIR__.'/../views');
+        View::addNamespace('common-login', __DIR__.'/../views');
     }
 
 
