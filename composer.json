@@ -1,7 +1,7 @@
 {
   "name": "bendani/php-common/login-service",
   "autoload": {
-    "psr-0": {
+    "psr-4": {
       "Bendani\\PhpCommon\\LoginService\\": "src"
     }
   },
