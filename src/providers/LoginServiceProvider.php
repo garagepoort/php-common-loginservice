@@ -3,6 +3,7 @@
 namespace Bendani\PhpCommon\LoginService\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class LoginServiceProvider extends ServiceProvider
 {
