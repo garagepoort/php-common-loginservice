@@ -1,6 +1,6 @@
 <?php
 
-namespace com\bendani\phpcommon\loginservice\Providers;
+namespace Bendani\PhpCommon\LoginService\Controllers;
 
 
 abstract class LoginControlller extends BaseController

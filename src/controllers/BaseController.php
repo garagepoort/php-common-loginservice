@@ -1,5 +1,7 @@
 <?php
 
+namespace Bendani\PhpCommon\LoginService\Controllers;
+
 class BaseController extends Controller {
 
 	/**
