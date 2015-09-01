@@ -2,6 +2,9 @@
 
 namespace Bendani\PhpCommon\LoginService\Controllers;
 
+use Illuminate\Routing\Controller;
+
+
 class BaseController extends Controller {
 
 	/**
