@@ -20,5 +20,10 @@ abstract class LoginController extends BaseController
         }
     }
 
+    public function logOut(){
+        Auth::logout();
+        return Redirect::to('login');
+    }
+
     public abstract function redirectAfterLogin();
 }
