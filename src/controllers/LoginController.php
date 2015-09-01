@@ -3,7 +3,7 @@
 namespace Bendani\PhpCommon\LoginService\Controllers;
 
 
-abstract class LoginControlller extends BaseController
+abstract class LoginController extends BaseController
 {
     public abstract function getLoginPage();
 
