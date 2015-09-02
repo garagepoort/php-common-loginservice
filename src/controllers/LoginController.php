@@ -16,7 +16,7 @@ abstract class LoginController extends BaseController
             'password' => Input::get('password')
         );
         if(Auth::attempt($userdata)){
-            $this->redirectAfterLogin();
+            return $this->redirectAfterLogin();
         }else{
             return Redirect::to('login')
                 ->with('message', 'Login failed: username password combination incorrect.');
