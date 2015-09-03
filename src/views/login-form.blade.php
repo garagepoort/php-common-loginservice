@@ -1,3 +1,9 @@
+@if(Session::has('message'))
+    <div id="loginAlertMessage" class="alert-danger alert">
+        <strong>{{ Session::get('message') }}</strong>
+    </div>
+@endif
+
 {{ Form::open(array('url' => 'login', 'class' => 'form-horizontal')) }}
 
 <fieldset>
