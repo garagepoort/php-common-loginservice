@@ -1,5 +1,5 @@
-angular.module('com.bendani.php.common.loginservice.login.directive', [])
-    .directive('login', function (){
+angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bendani.bibliomania.authentication.model'])
+    .directive('Authentication', function (Authentication){
         return {
             scope: true,
             restrict: "E",
@@ -8,7 +8,9 @@ angular.module('com.bendani.php.common.loginservice.login.directive', [])
             },
             controller: ['$scope', function($scope) {
                 $scope.login = function (user) {
-
+                    Authentication.save(user, function (){
+                        alert('success login');
+                    });
                 };
             }]
         };
