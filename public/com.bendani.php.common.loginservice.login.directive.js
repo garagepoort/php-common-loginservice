@@ -4,7 +4,7 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
             scope: true,
             restrict: "E",
             templateUrl: function($scope){
-                return $scope.$parent.partialsUrl + "login.html";
+                return $scope.$parent.partialsUrl + "packages/bendani/php-common/login-service/login.html";
             },
             controller: ['$scope', function($scope) {
                 $scope.login = function (user) {
