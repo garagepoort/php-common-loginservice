@@ -1,5 +1,5 @@
 angular.module('com.bendani.bibliomania.authentication.model', [ 'ngResource' ])
-    .factory('Authentication', ['$scope', '$resource', function ($scope, $resource) {
-        var url = $scope.baseUrl + "login";
+    .factory('Authentication', ['$rootScope', '$resource', function ($rootScope, $resource) {
+        var url = $rootScope.baseUrl + "login";
         return $resource(url, {});
     } ]);
