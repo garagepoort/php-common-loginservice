@@ -3,15 +3,17 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
         return {
             scope: true,
             restrict: "E",
-            templateUrl: function($scope){
-                return $scope.$parent.partialsUrl + "packages/bendani/php-common/login-service/login.html";
-            },
+            template : '<div ng-include="getTemplateUrl()"></div>',
             controller: ['$scope', function($scope) {
                 $scope.login = function (user) {
                     Authentication.save(user, function (){
                         alert('success login');
                     });
                 };
+
+                $scope.getTemplateUrl = function(){
+                    return $scope.$parent.baseUrl + "packages/bendani/php-common/login-service/login.html";
+                }
             }]
         };
     }]);
