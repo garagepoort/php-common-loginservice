@@ -1,5 +1,5 @@
 angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bendani.bibliomania.authentication.model'])
-    .directive('Authentication', function (Authentication){
+    .directive('login', ['Authentication', function (Authentication){
         return {
             scope: true,
             restrict: "E",
@@ -14,4 +14,4 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
                 };
             }]
         };
-    });
+    }]);
