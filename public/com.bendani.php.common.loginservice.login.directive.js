@@ -8,7 +8,6 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
                 $scope.login = function (user) {
                     Authentication.save(user, function (data){
                         $rootScope.loggedInUser = data;
-                        alert('success login');
                     });
                 };
 
