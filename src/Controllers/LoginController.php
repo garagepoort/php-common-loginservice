@@ -16,16 +16,18 @@ abstract class LoginController extends BaseController
             'password' => Input::get('password')
         );
         if(Auth::attempt($userdata)){
-            return $this->redirectAfterLogin();
+            return Auth::user();
         }else{
-            return Redirect::to('login')
-                ->with('message', 'Login failed: username password combination incorrect.');
+            return Response::json(array(
+                'code'      =>  401,
+                'message'   =>  'Login failed: username password combination incorrect.'
+            ), 401);
         }
     }
 
     public function logOut(){
         Auth::logout();
-        return Redirect::to('login');
+        return Response::json('log out succeeded', 200);
     }
 
     public abstract function redirectAfterLogin();
