@@ -1,12 +1,13 @@
 angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bendani.bibliomania.authentication.model'])
-    .directive('login', ['Authentication', function (Authentication){
+    .directive('login', ['Authentication', '$rootScope', function (Authentication, $rootScope){
         return {
             scope: true,
             restrict: "E",
             template : '<div ng-include="getTemplateUrl()"></div>',
             controller: ['$scope', function($scope) {
                 $scope.login = function (user) {
-                    Authentication.save(user, function (){
+                    Authentication.save(user, function (data){
+                        $rootScope.loggedInUser = data;
                         alert('success login');
                     });
                 };
