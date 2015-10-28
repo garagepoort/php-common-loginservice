@@ -30,6 +30,4 @@ abstract class LoginController extends BaseController
         Auth::logout();
         return Response::json('log out succeeded', 200);
     }
-
-    public abstract function redirectAfterLogin();
 }
