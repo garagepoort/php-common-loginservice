@@ -5,6 +5,7 @@ namespace Bendani\PhpCommon\LoginService\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Response;
 
 abstract class LoginController extends BaseController
 {
@@ -16,17 +17,17 @@ abstract class LoginController extends BaseController
             'password' => Input::get('password')
         );
         if(Auth::attempt($userdata)){
-            return $this->redirectAfterLogin();
+            return Auth::user();
         }else{
-            return Redirect::to('login')
-                ->with('message', 'Login failed: username password combination incorrect.');
+            return Response::json(array(
+                'code'      =>  401,
+                'message'   =>  'Login failed: username password combination incorrect.'
+            ), 401);
         }
     }
 
     public function logOut(){
         Auth::logout();
-        return Redirect::to('login');
+        return Response::json('log out succeeded', 200);
     }
-
-    public abstract function redirectAfterLogin();
 }
