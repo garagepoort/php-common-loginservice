@@ -10,7 +10,7 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
                         $rootScope.loggedInUser = data;
                     },
                     function(error){
-                        ErrorContainer.setErrorMessage("Login mislukt. Gebruikersnaam en/of wachtwoord is fout.");
+                        ErrorContainer.setErrorCode("Login mislukt. Gebruikersnaam en/of wachtwoord is fout.");
                     });
                 };
 
