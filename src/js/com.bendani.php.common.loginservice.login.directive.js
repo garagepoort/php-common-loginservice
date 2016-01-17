@@ -1,4 +1,4 @@
-angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bendani.php.common.loginservice.authentication.model', 'com.bendani.bibliomania.error.container'])
+angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bendani.php.common.loginservice.authentication.model'])
     .directive('login', ['Authentication', '$rootScope', 'ErrorContainer',function (Authentication, $rootScope, ErrorContainer){
         return {
             scope: true,
