@@ -9,14 +9,14 @@ angular.module('com.bendani.php.common.loginservice.login.directive', ['com.bend
                     Authentication.save(user, function (data){
                         $rootScope.loggedInUser = data;
                     },
-                    function(error){
+                    function(){
                         ErrorContainer.setErrorCode("Login mislukt. Gebruikersnaam en/of wachtwoord is fout.");
                     });
                 };
 
                 $scope.getTemplateUrl = function(){
                     return $scope.$parent.baseUrl + "packages/bendani/php-common/login-service/login.html";
-                }
+                };
             }]
         };
     }]);
