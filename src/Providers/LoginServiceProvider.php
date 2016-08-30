@@ -25,7 +25,7 @@ class LoginServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__.'/../../public' => public_path('vendor/bendani/php-common/login-service'),], 'public');
+        $this->publishes([__DIR__.'/../../public' => public_path('packages/bendani/php-common/login-service'),], 'public');
 
         $this->loadViewsFrom(__DIR__.'/../views', 'bendani/php-common/login-service');
     }
